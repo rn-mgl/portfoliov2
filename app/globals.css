@@ -16,12 +16,22 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-moz-selection {
+  background-color: #00695e;
+  color: #f2f2f2;
+}
+
+::selection {
+  background-color: #00695e;
+  color: #f2f2f2;
+}
+
+@layer base {
+  .tw-cstm-flex-col {
+    @apply tw-flex tw-flex-col tw-justify-center tw-items-center;
+  }
+
+  .tw-cstm-flex-row {
+    @apply tw-flex tw-flex-row tw-justify-center tw-items-center;
+  }
 }
