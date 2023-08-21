@@ -1,23 +1,28 @@
 import { Box } from "@mui/material";
 import React from "react";
+import photo from "@/public/about/Temp About.jpg";
+import Image from "next/image";
 
 export default function About() {
   return (
-    <Box className="tw-w-full tw-min-h-screen tw-p-10 tw-cstm-flex-col t:tw-p-20">
-      <Box className="tw-w-full tw-cstm-flex-col tw-gap-10 tw-items-start">
-        <p
-          className="tw-text-neutral-200 tw-font-extrabold tw-text-2xl
+    <Box
+      className="tw-w-full tw-min-h-screen tw-p-10 tw-cstm-flex-col tw-items-start 
+                    t:tw-p-20 l-s:tw-p-32 tw-gap-10"
+    >
+      <p
+        className="tw-text-neutral-200 tw-font-extrabold tw-text-2xl
                     m-l:tw-text-3xl
                     t:tw-text-5xl"
-        >
-          About
-        </p>
+      >
+        About
+      </p>
 
+      <Box className="tw-cstm-flex-col tw-gap-10 tw-items-start l-s:tw-cstm-flex-row l-s:tw-gap-20">
         <Box
           className="tw-cstm-flex-col tw-text-sm tw-font-extralight tw-w-full  
                     tw-items-start tw-gap-2 tw-text-white tw-leading-relaxed
                     m-l:tw-text-base
-                    t:tw-text-lg t:tw-w-8/12 t:tw-leading-loose"
+                    t:tw-text-lg t:tw-leading-loose"
         >
           <p>
             My journey into the world of web development began during my{" "}
@@ -69,6 +74,27 @@ export default function About() {
             which provides me with a well-rounded perspective that I bring to my development work.
           </p>
         </Box>
+
+        <Box className="tw-group tw-relative tw-cstm-flex-col l-s:tw-mb-auto">
+          <Image
+            src={photo}
+            alt="self"
+            priority
+            className="tw-w-full tw-h-full tw-relative tw-z-10 tw-opacity-60 
+                    group-hover:tw-opacity-100 tw-transition-all t:tw-w-96 l-s:tw-w-[34rem]"
+          />
+          <Box className="tw-absolute tw-w-full tw-h-full tw-bg-accntColor tw-top-0 tw-left-0" />
+          <Box
+            className="tw-absolute tw-w-full tw-h-full tw-border-2 
+                      tw-border-accntColor tw-top-0 tw-left-0
+                      tw-translate-y-3 tw-translate-x-3 tw-transition-all
+                      group-hover:tw-translate-y-0 group-hover:tw-translate-x-0"
+          />
+        </Box>
+      </Box>
+
+      <Box>
+        <p>Current technologies I use</p>
       </Box>
     </Box>
   );
