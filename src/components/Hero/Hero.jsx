@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
+import Link from "next/link";
 import React from "react";
+import { AiFillGithub } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 
 export default function Hero() {
@@ -26,7 +28,7 @@ export default function Hero() {
           </p>
         </Box>
 
-        <Box>
+        <Box className="tw-cstm-flex-col tw-gap-5 tw-items-start tw-justify-start">
           <p
             className="tw-text-white tw-text-sm tw-font-extralight tw-leading-relaxed tw-w-full
                     m-l:tw-text-base
@@ -43,6 +45,13 @@ export default function Hero() {
             </span>{" "}
             and <span className="tw-font-semibold tw-text-accntColor">MySQL.</span>
           </p>
+          <Link
+            className="tw-text-neutral-200 tw-text-2xl"
+            href="https://github.com/rn-mgl"
+            target="_blank"
+          >
+            <AiFillGithub />
+          </Link>
         </Box>
       </Box>
     </Box>

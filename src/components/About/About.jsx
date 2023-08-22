@@ -28,6 +28,7 @@ const mappedTechBack = backEnd.map((t) => {
 export default function About() {
   return (
     <Box
+      id="about"
       className="tw-w-full tw-min-h-screen tw-p-10 tw-cstm-flex-col tw-items-start 
                     t:tw-p-20 l-s:tw-p-32 tw-gap-10"
     >

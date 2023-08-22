@@ -4,6 +4,9 @@ import About from "@/src/components/About/About";
 import Hero from "@/src/components/Hero/Hero";
 import Projects from "@/src/components/Projects/Projects";
 import { Box } from "@mui/material";
+import Contact from "@/src/components/Contact/Contact";
+import Footer from "@/src/components/Footer/Footer";
+import Nav from "@/src/components/Nav/Nav";
 
 export default function Home() {
   const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
@@ -29,10 +32,17 @@ export default function Home() {
         }}
       />
 
-      <Box className="tw-max-w-screen-2xl tw-mx-auto">
+      <Nav />
+
+      <Box
+        className="tw-max-w-screen-2xl tw-mx-auto tw-h-screen tw-overflow-y-auto tw-font-main 
+            tw-scrollbar-thin tw-scroll-smooth tw-scrollbar-thumb-accntColor tw-scrollbar-track-prmColor"
+      >
         <Hero />
         <About />
         <Projects />
+        <Contact />
+        <Footer />
       </Box>
     </div>
   );

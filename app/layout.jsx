@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeRegistry>
-        <body className={`${inter.variable} tw-font-main  tw-scrollbar-none`}>{children}</body>
+        <body className={`${inter.variable} tw-font-main`}>{children}</body>
       </ThemeRegistry>
     </html>
   );
