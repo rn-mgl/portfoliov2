@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
-import About from "@/src/components/Hero/About";
+import About from "@/src/components/About/About";
 import Hero from "@/src/components/Hero/Hero";
+import Projects from "@/src/components/Projects/Projects";
+import { Box } from "@mui/material";
 
 export default function Home() {
   const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
@@ -27,8 +29,11 @@ export default function Home() {
         }}
       />
 
-      <Hero />
-      <About />
+      <Box className="tw-max-w-screen-2xl tw-mx-auto">
+        <Hero />
+        <About />
+        <Projects />
+      </Box>
     </div>
   );
 }

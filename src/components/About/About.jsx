@@ -2,6 +2,28 @@ import { Box } from "@mui/material";
 import React from "react";
 import photo from "@/public/about/Temp About.jpg";
 import Image from "next/image";
+import { FaSquare } from "react-icons/fa";
+
+const frontEnd = ["React JS", "Next JS", "Tailwind CSS"];
+const backEnd = ["Express JS", "MySQL", "Github"];
+
+const mappedTechFront = frontEnd.map((t) => {
+  return (
+    <Box key={t} className="tw-cstm-flex-row tw-gap-2">
+      <FaSquare className="tw-text-accntColor tw-text-[0.4rem] tw-rotate-45" />
+      <p>{t}</p>
+    </Box>
+  );
+});
+
+const mappedTechBack = backEnd.map((t) => {
+  return (
+    <Box key={t} className="tw-cstm-flex-row tw-gap-2">
+      <FaSquare className="tw-text-accntColor tw-text-[0.4rem] tw-rotate-45" />
+      <p>{t}</p>
+    </Box>
+  );
+});
 
 export default function About() {
   return (
@@ -20,13 +42,13 @@ export default function About() {
       <Box className="tw-cstm-flex-col tw-gap-10 tw-items-start l-s:tw-cstm-flex-row l-s:tw-gap-20">
         <Box
           className="tw-cstm-flex-col tw-text-sm tw-font-extralight tw-w-full  
-                    tw-items-start tw-gap-2 tw-text-white tw-leading-relaxed
+                    tw-items-start tw-gap-3 tw-text-white tw-leading-relaxed
                     m-l:tw-text-base
                     t:tw-text-lg t:tw-leading-loose"
         >
           <p>
             My journey into the world of web development began during my{" "}
-            <span className="tw-font-semibold tw-text-accntColor">freshman year of 2019.</span>{" "}
+            <span className="tw-font-semibold tw-text-accntColor">freshman year of 2020.</span>{" "}
             Since then, I&apos;ve been immersed in a variety of personal projects that have equipped
             me with proficiency in{" "}
             <span className="tw-font-semibold tw-text-accntColor">front-end</span> and{" "}
@@ -80,12 +102,13 @@ export default function About() {
             src={photo}
             alt="self"
             priority
-            className="tw-w-full tw-h-full tw-relative tw-z-10 tw-opacity-60 
-                    group-hover:tw-opacity-100 tw-transition-all t:tw-w-96 l-s:tw-w-[34rem]"
+            width={500}
+            className="tw-w-full tw-h-full tw-relative tw-z-10 tw-opacity-60 tw-rounded-md 
+                    group-hover:tw-opacity-100 tw-transition-all t:tw-w-96 l-s:tw-w-96"
           />
-          <Box className="tw-absolute tw-w-full tw-h-full tw-bg-accntColor tw-top-0 tw-left-0" />
+          <Box className="tw-absolute tw-w-full tw-h-full tw-bg-accntColor tw-top-0 tw-left-0 tw-rounded-md " />
           <Box
-            className="tw-absolute tw-w-full tw-h-full tw-border-2 
+            className="tw-absolute tw-w-full tw-h-full tw-border-2 tw-rounded-md 
                       tw-border-accntColor tw-top-0 tw-left-0
                       tw-translate-y-3 tw-translate-x-3 tw-transition-all
                       group-hover:tw-translate-y-0 group-hover:tw-translate-x-0"
@@ -93,8 +116,23 @@ export default function About() {
         </Box>
       </Box>
 
-      <Box>
-        <p>Current technologies I use</p>
+      <Box
+        className="tw-cstm-flex-col tw-w-full tw-gap-5 l-s:tw-w-6/12 l-s:tw-mr-auto tw-text-sm 
+                      m-l:tw-text-base
+                      l-s:tw-items-start l-l:tw-w-4/12 t:tw-text-lg "
+      >
+        <p className="tw-font-semibold tw-text-accntColor">Technologies I currently use</p>
+
+        <Box
+          className="tw-cstm-flex-row tw-w-full tw-text-white 
+                      tw-font-extralight "
+        >
+          <Box className="tw-mr-auto tw-cstm-flex-col tw-items-start tw-gap-2">
+            {mappedTechFront}
+          </Box>
+
+          <Box className="tw-cstm-flex-col tw-items-start tw-gap-2">{mappedTechBack}</Box>
+        </Box>
       </Box>
     </Box>
   );
