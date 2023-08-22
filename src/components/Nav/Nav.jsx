@@ -8,19 +8,24 @@ import { AiOutlineInfoCircle, AiOutlineMail, AiOutlineProject } from "react-icon
 export default function Nav() {
   const [showNav, setShowNav] = React.useState(true);
   const [resetNav, setResetNav] = React.useState(true);
+  const [prevScrollPos, setPrevScrollPos] = React.useState(0);
 
   React.useEffect(() => {
-    const show = (e) => {
-      setResetNav(window.scrollY < 50);
-      setShowNav(e.deltaY < 0);
+    const show = () => {
+      const currScrollPos = window.scrollY;
+      const shouldShow = currScrollPos < prevScrollPos || currScrollPos < 50;
+
+      setPrevScrollPos(currScrollPos);
+      setShowNav(shouldShow);
+      setResetNav(currScrollPos < 50);
     };
 
-    window.addEventListener("wheel", show);
+    window.addEventListener("scroll", show);
 
     return () => {
-      window.removeEventListener("wheel", show);
+      window.removeEventListener("scroll", show);
     };
-  }, []);
+  }, [prevScrollPos]);
 
   return (
     <Box
