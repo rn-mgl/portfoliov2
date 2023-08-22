@@ -16,9 +16,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="tw-scroll-smooth">
       <ThemeRegistry>
-        <body className={`${inter.variable} tw-font-main`}>{children}</body>
+        <body
+          className={`${inter.variable} tw-font-main tw-scrollbar-thin tw-scrollbar-thumb-accntColor tw-scrollbar-track-prmColor`}
+        >
+          {children}
+        </body>
       </ThemeRegistry>
     </html>
   );

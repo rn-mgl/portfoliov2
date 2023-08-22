@@ -3,10 +3,11 @@ import React from "react";
 import About from "@/src/components/About/About";
 import Hero from "@/src/components/Hero/Hero";
 import Projects from "@/src/components/Projects/Projects";
-import { Box } from "@mui/material";
 import Contact from "@/src/components/Contact/Contact";
 import Footer from "@/src/components/Footer/Footer";
 import Nav from "@/src/components/Nav/Nav";
+
+import { Box } from "@mui/material";
 
 export default function Home() {
   const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
@@ -24,7 +25,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="tw-scroll-smooth tw-bg-prmColor">
+    <div className=" tw-bg-prmColor">
       <div
         className="tw-fixed tw-cstm-flex-col tw-pointer-events-none tw-w-full tw-h-full"
         style={{
@@ -34,10 +35,7 @@ export default function Home() {
 
       <Nav />
 
-      <Box
-        className="tw-max-w-screen-2xl tw-mx-auto tw-h-screen tw-overflow-y-auto tw-font-main 
-            tw-scrollbar-thin tw-scroll-smooth tw-scrollbar-thumb-accntColor tw-scrollbar-track-prmColor"
-      >
+      <Box className="tw-max-w-screen-2xl tw-mx-auto tw-font-main">
         <Hero />
         <About />
         <Projects />
