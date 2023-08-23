@@ -2,11 +2,13 @@ import { Box } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { BiChevronDown } from "react-icons/bi";
 
 export default function Hero() {
   return (
-    <Box className="tw-w-full tw-h-screen tw-p-10 tw-cstm-flex-col t:tw-p-20 l-s:tw-p-32 tw-justify-start ">
+    <Box
+      id="main"
+      className="tw-w-full tw-h-screen tw-p-10 tw-cstm-flex-col t:tw-p-20 l-s:tw-p-32 tw-justify-start "
+    >
       <Box className="tw-w-full tw-cstm-flex-col tw-gap-5 tw-items-start tw-my-auto">
         <Box className="tw-flex tw-flex-col tw-gap-2 tw-w-full t:tw-gap-5 ">
           <p className="tw-text-accntColor tw-text-sm tw-font-extralight t:tw-text-lg">
