@@ -25,14 +25,14 @@ export default function Contact() {
         <br className="tw-hidden l-s:tw-block" /> I&apos;m always here and eager to chat!
       </p>
 
-      <Link
+      <a
         href="mailto:reinb2ra@gmail.com"
         className="tw-text-accntColor tw-border-2 tw-rounded-md tw-p-3 m-l:tw-text-base
                     tw-border-accntColor tw-font-medium tw-text-sm
                     hover:tw-shadow-[0.3rem_0.3rem_#04D9B2] tw-transition-all"
       >
         Reach Out
-      </Link>
+      </a>
     </Box>
   );
 }
