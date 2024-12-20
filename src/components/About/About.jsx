@@ -5,10 +5,10 @@ import Image from "next/image";
 import { FaSquare } from "react-icons/fa";
 
 const frontEnd = ["React JS", "Next JS", "Tailwind CSS"];
-const backEnd = ["Laravel", "MySQL", "Github"];
+const backEnd = ["Laravel", "MySQL", "Github", "GitLab"];
 
 const workedOnFrontEnd = ["HTML", "CSS", "jQuery", "Vanilla JS"];
-const workedOnBackEnd = ["PHP", "GitLab"];
+const workedOnBackEnd = ["PHP", "Express JS"];
 
 const mappedTechFront = frontEnd.map((t) => {
   return (
