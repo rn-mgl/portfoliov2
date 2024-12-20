@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-// import photo from "@/public/about/me.jpg";
+import photo from "@/public/about/myPic.jpg";
 import Image from "next/image";
 import { FaSquare } from "react-icons/fa";
 
@@ -102,14 +102,14 @@ export default function About() {
         </Box>
 
         <Box className="tw-group tw-relative tw-cstm-flex-col l-s:tw-mb-auto">
-          {/* <Image
+          <Image
             src={photo}
             alt="self"
             priority
             width={500}
             className="tw-w-full tw-h-full tw-relative tw-z-10 tw-opacity-60 tw-rounded-md 
                     group-hover:tw-opacity-100 tw-transition-all t:tw-w-96 l-s:tw-w-96"
-          /> */}
+          />
           <Box className="tw-absolute tw-w-full tw-h-full tw-bg-accntColor tw-top-0 tw-left-0 tw-rounded-md " />
           <Box
             className="tw-absolute tw-w-full tw-h-full tw-border-2 tw-rounded-md 
