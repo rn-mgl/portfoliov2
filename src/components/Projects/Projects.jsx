@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import comms from "@/public/projects/Comms.png";
-// import sync from "@/public/projects/Synchroflow.png";
+import sync from "@/public/projects/Synchroflow.png";
 import grasp from "@/public/projects/Grasp.png";
 import readefine from "@/public/projects/Readefine.png";
 import takomommy from "@/public/projects/Takomommy.png";
@@ -54,7 +54,7 @@ const projects = [
     github: "https://github.com/rn-mgl/synchroflow-client",
     header: "Synchroflow",
     subHeader: " Task Management",
-    thumb: comms,
+    thumb: sync,
     definition: `A task management website real-time updates using web sockets. It can handle task creation, assignation, 
                 associate exploration, communication, invitations, and dashboard.`,
   },
