@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import comms from "@/public/projects/Comms.png";
+import sync from "@/public/projects/Synchroflow.png";
 import grasp from "@/public/projects/Grasp.png";
 import readefine from "@/public/projects/Readefine.png";
 import takomommy from "@/public/projects/Takomommy.png";
-import write from "@/public/projects/Write.png";
 import Link from "next/link";
 
 import { AiFillGithub } from "react-icons/ai";
@@ -20,15 +20,6 @@ const projects = [
     thumb: readefine,
     definition: `A Gamified Learning Platform to help and encourage elementary students 
                 improve their reading comprehension skills in the English Language.`,
-  },
-  {
-    link: "https://write-rmb.vercel.app",
-    github: "https://github.com/rn-mgl/write.git",
-    header: "Write",
-    subHeader: "Note Taker",
-    thumb: write,
-    definition: `A note taking web-app with folder and file directory system fully 
-                capable of transfering folders and files to one another.`,
   },
   {
     link: "https://grasp-rmb.vercel.app",
@@ -57,6 +48,15 @@ const projects = [
     thumb: comms,
     definition: `A messaging web-app with real-time updates using web sockets. It can make group chats, send files, 
                 block accounts, add friends, accept requests, and notify when a message is received.`,
+  },
+  {
+    link: "https://synchroflow.vercel.app",
+    github: "https://github.com/rn-mgl/synchroflow-client",
+    header: "Synchroflow",
+    subHeader: " Task Management",
+    thumb: sync,
+    definition: `A task management website real-time updates using web sockets. It can handle task creation, assignation, 
+                associate exploration, communication, invitations, and dashboard.`,
   },
 ];
 
@@ -92,7 +92,11 @@ export default function Projects() {
         >
           <Box
             className={`tw-cstm-flex-col tw-z-10 t:tw-mt-auto tw-text-left tw-items-start
-                        ${i % 2 ? "t:tw-mr-auto t:tw-items-start" : "t:tw-ml-auto t:tw-items-end"}`}
+                        ${
+                          i % 2
+                            ? "t:tw-mr-auto t:tw-items-start"
+                            : "t:tw-ml-auto t:tw-items-end"
+                        }`}
           >
             <p
               className="tw-text-neutral-200 tw-font-bold tw-gap-2

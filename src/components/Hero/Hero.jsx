@@ -36,16 +36,22 @@ export default function Hero() {
                     m-l:tw-text-base
                     t:tw-leading-loose t:tw-w-8/12 t:tw-text-lg"
           >
-            I&apos;m a fourth-year college student deeply passionate about web development with
-            proficient skills in{" "}
-            <span className="tw-font-semibold tw-text-accntColor">front-end</span> and{" "}
-            <span className="tw-font-semibold tw-text-accntColor">back-end</span> technologies,
-            including
+            I&apos;m currently a junior web developer deeply passionate about
+            web development with proficient skills in{" "}
+            <span className="tw-font-semibold tw-text-accntColor">
+              front-end
+            </span>{" "}
+            and{" "}
+            <span className="tw-font-semibold tw-text-accntColor">
+              back-end
+            </span>{" "}
+            technologies, including
             <span className="tw-font-semibold tw-text-accntColor">
               {" "}
               React JS, Next JS, Express JS,
             </span>{" "}
-            and <span className="tw-font-semibold tw-text-accntColor">MySQL.</span>
+            and{" "}
+            <span className="tw-font-semibold tw-text-accntColor">MySQL.</span>
           </p>
           <Link
             className="tw-text-neutral-200 tw-text-2xl"

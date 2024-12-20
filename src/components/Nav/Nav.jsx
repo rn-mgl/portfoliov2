@@ -5,7 +5,11 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/public/global/logo.png";
 
-import { AiOutlineInfoCircle, AiOutlineMail, AiOutlineProject } from "react-icons/ai";
+import {
+  AiOutlineInfoCircle,
+  AiOutlineMail,
+  AiOutlineProject,
+} from "react-icons/ai";
 import { Box } from "@mui/material";
 
 export default function Nav() {

@@ -1,11 +1,14 @@
 import { Box } from "@mui/material";
 import React from "react";
-import photo from "@/public/about/Temp About.jpg";
+import photo from "@/public/about/me.jpg";
 import Image from "next/image";
 import { FaSquare } from "react-icons/fa";
 
 const frontEnd = ["React JS", "Next JS", "Tailwind CSS"];
-const backEnd = ["Express JS", "MySQL", "Github"];
+const backEnd = ["Laravel", "MySQL", "Github"];
+
+const workedOnFrontEnd = ["HTML", "CSS", "jQuery", "Vanilla JS"];
+const workedOnBackEnd = ["PHP", "GitLab"];
 
 const mappedTechFront = frontEnd.map((t) => {
   return (
@@ -17,6 +20,24 @@ const mappedTechFront = frontEnd.map((t) => {
 });
 
 const mappedTechBack = backEnd.map((t) => {
+  return (
+    <Box key={t} className="tw-cstm-flex-row tw-gap-2">
+      <FaSquare className="tw-text-accntColor tw-text-[0.4rem] tw-rotate-45" />
+      <p>{t}</p>
+    </Box>
+  );
+});
+
+const mappedWorkedTechFront = workedOnFrontEnd.map((t) => {
+  return (
+    <Box key={t} className="tw-cstm-flex-row tw-gap-2">
+      <FaSquare className="tw-text-accntColor tw-text-[0.4rem] tw-rotate-45" />
+      <p>{t}</p>
+    </Box>
+  );
+});
+
+const mappedWorkedTechBack = workedOnBackEnd.map((t) => {
   return (
     <Box key={t} className="tw-cstm-flex-row tw-gap-2">
       <FaSquare className="tw-text-accntColor tw-text-[0.4rem] tw-rotate-45" />
@@ -48,53 +69,35 @@ export default function About() {
                     t:tw-text-lg t:tw-leading-loose"
         >
           <p>
-            My journey into the world of web development began during my{" "}
-            <span className="tw-font-semibold tw-text-accntColor">freshman year of 2020.</span>{" "}
-            Since then, I&apos;ve been immersed in a variety of personal projects that have equipped
-            me with proficiency in{" "}
-            <span className="tw-font-semibold tw-text-accntColor">front-end</span> and{" "}
-            <span className="tw-font-semibold tw-text-accntColor">back-end</span> technologies,
-            including
+            I began my web development journey in 2020, working on personal
+            projects that helped me gain proficiency in{" "}
+            <span className="tw-font-semibold tw-text-accntColor">
+              front-end
+            </span>{" "}
+            and{" "}
+            <span className="tw-font-semibold tw-text-accntColor">
+              back-end
+            </span>{" "}
+            technologies, including
             <span className="tw-font-semibold tw-text-accntColor">
               {" "}
               React JS, Next JS, Express JS,
             </span>{" "}
-            and <span className="tw-font-semibold tw-text-accntColor">MySQL.</span> Building web
-            applications has not only been a skill-building endeavor but a fulfilling creative
-            outlet as well.
+            and{" "}
+            <span className="tw-font-semibold tw-text-accntColor">
+              MySQL.
+            </span>{" "}
+            Building web applications has not only been a skill-building
+            endeavor but a fulfilling creative outlet as well. These experiences
+            allowed me to build practical skills and explore creative solutions
+            in web development.
           </p>
 
           <p>
-            One of my proudest accomplishments to date is{" "}
-            <span className="tw-font-semibold tw-text-accntColor">
-              leading our capstone project.
-            </span>{" "}
-            This project challenged me to apply my knowledge in a real-world scenario, where I have
-            made a{" "}
-            <span className="tw-font-semibold tw-text-accntColor">
-              gamified learning platform for elementary students
-            </span>{" "}
-            to help and encourage them improve their{" "}
-            <span className="tw-font-semibold tw-text-accntColor">
-              reading comprehension skills in the English language.
-            </span>
-          </p>
-
-          <p>
-            My current focus revolves around{" "}
-            <span className="tw-font-semibold tw-text-accntColor">
-              allowing me to merge my technical skills with my passion for problem-solving.
-            </span>{" "}
-            As I continue on this journey, I&apos;m excited to explore innovative technologies and
-            methodologies that push the boundaries of what&apos;s possible on the web.
-          </p>
-
-          <p>
-            Beyond coding,{" "}
-            <span className="tw-font-semibold tw-text-accntColor">
-              I&apos;m always critiquing any website I visit both as a user and developer,
-            </span>{" "}
-            which provides me with a well-rounded perspective that I bring to my development work.
+            Now, as a junior web developer specializing in backend PHP, I am
+            excited to tackle challenges, solve problems, and continue exploring
+            innovative technologies. I also enjoy critiquing websites, combining
+            my perspective as a user and developer to improve my work.
           </p>
         </Box>
 
@@ -122,7 +125,9 @@ export default function About() {
                       m-l:tw-text-base
                       l-s:tw-items-start l-l:tw-w-4/12 t:tw-text-lg "
       >
-        <p className="tw-font-semibold tw-text-accntColor">Technologies I currently use</p>
+        <p className="tw-font-semibold tw-text-accntColor">
+          Technologies I currently use
+        </p>
 
         <Box
           className="tw-cstm-flex-row tw-w-full tw-text-white 
@@ -132,7 +137,32 @@ export default function About() {
             {mappedTechFront}
           </Box>
 
-          <Box className="tw-cstm-flex-col tw-items-start tw-gap-2">{mappedTechBack}</Box>
+          <Box className="tw-cstm-flex-col tw-items-start tw-gap-2">
+            {mappedTechBack}
+          </Box>
+        </Box>
+      </Box>
+
+      <Box
+        className="tw-cstm-flex-col tw-w-full tw-gap-5 l-s:tw-w-6/12 l-s:tw-mr-auto tw-text-sm 
+                      m-l:tw-text-base
+                      l-s:tw-items-start l-l:tw-w-4/12 t:tw-text-lg "
+      >
+        <p className="tw-font-semibold tw-text-accntColor">
+          Technologies I have worked with
+        </p>
+
+        <Box
+          className="tw-cstm-flex-row tw-w-full tw-text-white tw-items-start
+                      tw-font-extralight "
+        >
+          <Box className="tw-mr-auto tw-cstm-flex-col tw-items-start tw-gap-2">
+            {mappedWorkedTechFront}
+          </Box>
+
+          <Box className="tw-cstm-flex-col tw-items-start tw-gap-2">
+            {mappedWorkedTechBack}
+          </Box>
         </Box>
       </Box>
     </Box>
