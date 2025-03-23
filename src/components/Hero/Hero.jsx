@@ -37,7 +37,7 @@ export default function Hero() {
                     t:tw-leading-loose t:tw-w-8/12 t:tw-text-lg"
           >
             I&apos;m currently a junior web developer deeply passionate about
-            web development with proficient skills in{" "}
+            web development with knowledge in{" "}
             <span className="tw-font-semibold tw-text-accntColor">
               front-end
             </span>{" "}
@@ -48,7 +48,7 @@ export default function Hero() {
             technologies, including
             <span className="tw-font-semibold tw-text-accntColor">
               {" "}
-              React JS, Next JS, Express JS,
+              React JS, Next JS, Laravel, Express JS,
             </span>{" "}
             and{" "}
             <span className="tw-font-semibold tw-text-accntColor">MySQL.</span>
