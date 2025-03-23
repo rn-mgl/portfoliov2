@@ -106,7 +106,7 @@ export default function Projects() {
               i % 2 === 0 ? "tw-items-end" : "tw-items-start"
             }`}
           >
-            <p className="tw-text-sm tw-font-bold tw-text-white">
+            <p className="tw-text-sm tw-font-bold tw-text-white l-s:tw-text-xl">
               Improvements
             </p>
             <Box
