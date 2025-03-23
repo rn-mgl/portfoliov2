@@ -131,9 +131,9 @@ export default function About() {
 
         <Box
           className="tw-cstm-flex-row tw-w-full tw-text-white 
-                      tw-font-extralight "
+                      tw-font-extralight tw-items-start"
         >
-          <Box className="tw-mr-auto tw-cstm-flex-col tw-items-start tw-gap-2">
+          <Box className="tw-mr-auto tw-cstm-flex-col tw-items-start tw-gap-2 ">
             {mappedTechFront}
           </Box>
 

@@ -20,34 +20,7 @@ const projects = [
     thumb: readefine,
     definition: `A Gamified Learning Platform to help and encourage elementary students 
                 improve their reading comprehension skills in the English Language.`,
-  },
-  {
-    link: "https://grasp-rmb.vercel.app",
-    github: "https://github.com/rn-mgl/grasp-by-rltn.git",
-    header: "Grasp",
-    subHeader: "Learning Management System",
-    thumb: grasp,
-    definition: `A Learning Management System with file uploads, creation of classrooms, submitting of files 
-                from student to teacher and vice-versa, posting of announcements, checking of progress, 
-                and updating of user profile.`,
-  },
-  {
-    link: "https://takomommy.vercel.app",
-    github: "https://github.com/rn-mgl/takomommy_v2_c.git",
-    header: "Takomommy",
-    subHeader: "E-Commerce",
-    thumb: takomommy,
-    definition: `An e-commerce store made for selling takoyaki. It can track progress of orders, 
-                cancel orders, and message customers.`,
-  },
-  {
-    link: "https://comms-rmb.vercel.app",
-    github: "https://github.com/rn-mgl/comms.git",
-    header: "Comms",
-    subHeader: " Messaging Website",
-    thumb: comms,
-    definition: `A messaging web-app with real-time updates using web sockets. It can make group chats, send files, 
-                block accounts, add friends, accept requests, and notify when a message is received.`,
+    improvements: ["Real-time Updates", "SQL Security/Vulnerability"],
   },
   {
     link: "https://synchroflow.vercel.app",
@@ -57,11 +30,25 @@ const projects = [
     thumb: sync,
     definition: `A task management website real-time updates using web sockets. It can handle task creation, assignation, 
                 associate exploration, communication, invitations, and dashboard.`,
+    improvements: ["SQL Security/Vulnerability"],
   },
 ];
 
 export default function Projects() {
   const mappedProjects = projects.map((p, i) => {
+    const mappedImprovements = p.improvements.map((improvement, j) => {
+      return (
+        <p
+          key={j}
+          className={`tw-text-xs tw-text-accntColor ${
+            j % 2 === 0 ? "tw-text-right" : "tw-text-left"
+          }`}
+        >
+          {improvement}
+        </p>
+      );
+    });
+
     return (
       <Box
         key={p.link}
@@ -113,6 +100,23 @@ export default function Projects() {
           >
             {p.definition}
           </p>
+
+          <Box
+            className={`tw-flex tw-flex-col tw-justify-start ${
+              i % 2 === 0 ? "tw-items-end" : "tw-items-start"
+            }`}
+          >
+            <p className="tw-text-sm tw-font-bold tw-text-white">
+              Improvements
+            </p>
+            <Box
+              className={`flex tw-flex-col tw-items-center tw-justify-end tw-gap-1 ${
+                i % 2 === 0 ? "tw-justify-end" : "tw-justify-start"
+              }`}
+            >
+              {mappedImprovements}
+            </Box>
+          </Box>
 
           <Box
             className={`tw-cstm-flex-row tw-gap-5 tw-text-xl tw-text-neutral-200 t:tw-mt-auto
