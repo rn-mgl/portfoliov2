@@ -1,15 +1,12 @@
-import Image from "next/image";
-import React from "react";
-import comms from "@/public/projects/Comms.png";
-import sync from "@/public/projects/Synchro.png";
-import grasp from "@/public/projects/Grasp.png";
 import readefine from "@/public/projects/Readefine.png";
-import takomommy from "@/public/projects/Takomommy.png";
+import sync from "@/public/projects/Synchro.png";
+import nest from "@/public/projects/Nest.png";
+import Image from "next/image";
 import Link from "next/link";
 
+import { Box } from "@mui/material";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
-import { Box } from "@mui/material";
 
 const projects = [
   {
@@ -27,8 +24,16 @@ const projects = [
     header: "Synchroflow",
     subHeader: " Task Management",
     thumb: sync,
-    definition: `A task management website real-time updates using web sockets. It can handle task creation, assignation, 
+    definition: `A task management website with real-time updates using web sockets (socket.io). It can handle task creation, assignation, 
                 associate exploration, communication, invitations, and dashboard.`,
+  },
+  {
+    link: "https://nest-rltns.vercel.app/",
+    github: "https://github.com/rn-mgl/nest-client",
+    header: "Nest",
+    subHeader: " HR Management",
+    thumb: nest,
+    definition: `An HR management website with the goal to use RBAC. It can handle Attendances, Onboardings, Leaves, Performances, Trainings, Documents, and Management of resources.`,
   },
 ];
 

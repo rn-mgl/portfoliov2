@@ -81,7 +81,7 @@ export default function About() {
             technologies, including
             <span className="tw-font-semibold tw-text-accntColor">
               {" "}
-              React JS, Next JS, Express JS,
+              React JS, Next JS, Express JS, Laravel,
             </span>{" "}
             and{" "}
             <span className="tw-font-semibold tw-text-accntColor">
